@@ -10,9 +10,10 @@
 
 if(isset($_POST['email'])) //Check if email was entered.
 {
-    $emailTo = "bhaktaj7@students.rowan.edu";
+    $emailTo = "ceroner0@students.rowan.edu";
     $email_subject = $_POST['subject'];
 
+    $emailMessage = "";
     $errorMessage = "";
     
     //Check for empty fields.
@@ -54,21 +55,21 @@ if(isset($_POST['email'])) //Check if email was entered.
             
             echo json_encode($array); //Send JSON.
         }
-        else if(!preg_match($emailException, $name))
+        else if($name == "")
         {
             $errorMessage .= 'The name you entered is not valid.';
             $array = array('error' => $errorMessage);
             
             echo json_encode($array); //Send JSON.
         }
-         else if(!preg_match($emailException, $subject))
+         else if($subject == "")
         {
             $errorMessage .= 'The subject you entered is not valid.';
             $array = array('error' => $errorMessage);
             
             echo json_encode($array); //Send JSON.
         }
-         else if(!preg_match($emailException, $comment))
+         else if($comment == "")
         {
             $errorMessage .= 'The comment you entered is not valid.';
             $array = array('error' => $errorMessage);
@@ -101,9 +102,9 @@ if(isset($_POST['email'])) //Check if email was entered.
                     "Reply-To: " . $email . "\r\n" . 
                     "X-Mailer: PHP/" . phpVersion();
 
-            @mail($emailTo, $subject, $emailMessage, $headers); //Send email here.
+            mail($emailTo, $subject, $emailMessage, $headers); //Send email here.
 
-            $array = array('submitted' => 'true'); //Send back true.
+            $array = array('submitted' => true); //Send back true.
 
             echo json_encode($array); //Send JSON.
         }
@@ -111,7 +112,7 @@ if(isset($_POST['email'])) //Check if email was entered.
 }
 else
 {
-    $array = array('submitted' => 'false'); //Send back false.
+    $array = array('submitted' => false); //Send back false.
     echo json_encode($array); //Send JSON.
 }
 ?>
