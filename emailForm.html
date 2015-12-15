@@ -1,0 +1,163 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title> Email Form </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Custom ACM CSS -->
+        <link href='css/ACM_CSS/custom.css' rel='stylesheet'/>
+        <link href="css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="css/Animate/animate.css" rel="stylesheet"/>
+        
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="js/noty/jquery.noty.packaged.min.js"></script>
+        
+        <!-- Bootstrap's JavaScript -->
+        <script src="js/bootstrap_js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        
+        <div align="center">
+            <div style='width: 72%'>
+                <nav class="navbar navbar-inverse">
+
+                    <!-- ACM Logo -->
+                    <div class="container-fluid">
+                         <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" 
+                                    data-toggle="collapse" 
+                                    data-target="#bs-example-navbar-collapse-1" 
+                                    aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="index.html">
+                                <img src="images/acm_logo.jpg" alt="ACM Logo"></a>
+                        </div>
+
+                        <!-- Committees Dropdown -->
+                        <div class="collapse navbar-collapse" 
+                             id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" 
+                                       data-toggle="dropdown" role="button" 
+                                       aria-haspopup="true" aria-expanded="false">
+                                        Comittees <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="webDevelopment.html">Web Development</a></li>
+                                        <li><a href="androidDevelopment.html">Android Development</a></li>
+                                        <li><a href="animationTeam.html">Animation Team</a></li>
+                                    </ul>
+                                </li>
+
+                                <!-- Events link -->
+                                <li><a href="Rowan-ACM-Calendar.html">Events</a></li>
+
+                                <!-- Board Members link -->
+                                <li><a href="boardMembers.html">Board Members</a></li>
+
+                                 <!-- Contact Us link -->
+                                <li><a href="emailForm.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </nav>
+            </div>
+        </div>
+        
+        <!-- Email Form -->
+        <div align="center">
+            <div class="border" style="width: 70%;">
+                <br>
+                <div class="container" style="width: 100%;">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="input-group">
+                                <label for="name">Name:</label>
+                                <input name="name" type="text" id="name" size="40" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="input-group">
+                                <label for="e-mail">E-mail:</label>
+                                <input name="email" type="text" id="email" size="40" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="input-group">
+                                <label for="subject">Subject:</label>
+                                <input name="subject" type="text" id="subject" size="40" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="input-group">
+                                <label for="comment">Comment:</label>
+                                <textarea name="comment" style="resize: none; overflow-y: scroll" cols="55" rows="5" id="comment" class="form-control"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <br>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+                            <div class="input-group">
+                                <input type="submit" name="submit" value="Submit" id="submit" class="btn btn-success">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+        <br>
+        
+        <!-- Footer -->
+        <div align="center">
+            <div style="width: 72%">
+                <nav class="navbar navbar-inverse">
+                    <div>
+                        <a href="#">About</a>
+                        |
+                        <a href="http://www.acm.org/">ACM Main Site</a>
+                    </div>
+                   
+                    <div>
+                        <span>
+                            <a href="https://www.facebook.com/rowanacm">
+                                <img src="images/facebook_logo/FB-f-Logo__blue_29.png" alt="facebook"/>
+                            </a>
+                        </span>
+
+                        <span>
+                            <a href='https://github.com/RowanACM'>
+                                <img src='images/github_logo/GitHub-Mark-Light-32px.png' alt='github'/>
+                            </a>
+                        </span>
+                    </div>
+                    
+                    
+                    <p>ACM Website developed by the ACM Web Development Team 2015</p>
+                </nav>
+            </div>
+        </div>
+        
+        <script src="email.js"></script>
+        
+    </body>
+</html>

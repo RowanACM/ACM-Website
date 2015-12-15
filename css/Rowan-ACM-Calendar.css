@@ -1,0 +1,14 @@
+* { margin: 0; padding: 0; }
+body {font-size: 15px;}
+#cal {
+position: relative;
+max-width: 800px;
+max-height: auto;
+margin: auto; 
+padding: 10px;
+}
+#googleCalendar {
+border: 0;
+width: 100%;
+height: 500px; 
+}

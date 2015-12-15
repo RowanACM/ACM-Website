@@ -1,0 +1,29 @@
+/*
+This is custom CSS for personalizing specific elements on the page that Bootstrap
+cannot help with.
+*/
+/* 
+    Created on : Oct 14, 2015, 10:23:52 PM
+    Author     : Richard Cerone
+*/
+
+.border
+{
+    -webkit-box-shadow: -3px 4px 11px 4px rgba(0,0,0,0.34);
+    -moz-box-shadow: -3px 4px 11px 4px rgba(0,0,0,0.34);
+    box-shadow: -3px 4px 11px 4px rgba(0,0,0,0.34);
+}
+
+.sb-slider
+{
+    -webkit-box-shadow: 0px 86px 76px -51px rgba(0,0,0,0.87);
+    -moz-box-shadow: 0px 86px 76px -51px rgba(0,0,0,0.87);
+    box-shadow: 0px 86px 76px -51px rgba(0,0,0,0.87);
+}
+
+.calendar
+{
+    -webkit-box-shadow: 5px 31px 43px -6px rgba(0,0,0,0.63);
+    -moz-box-shadow: 5px 31px 43px -6px rgba(0,0,0,0.63);
+    box-shadow: 5px 31px 43px -6px rgba(0,0,0,0.63);
+}

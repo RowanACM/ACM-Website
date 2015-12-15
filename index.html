@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<!--
+This the ACM homepage. All links will start here.
+@author Richard Cerone
+@group Web Development
+@date 10/2/2015
+-->
+<html>
+    
+    <head>
+        <title>Rowan ACM</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Custom ACM CSS -->
+        <link href='css/ACM_CSS/custom.css' rel='stylesheet'>
+        
+        <!-- BootStrap template -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        
+        <!-- Slicebox css -->
+        <link href="css/slicebox_css/slicebox.css" rel="stylesheet">
+        
+    </head>
+    
+    <body>
+        
+        <!-- Navbar -->
+        <div align="center">
+            <div style='width: 72%;'>
+                <nav class="navbar navbar-inverse">
+
+                    <!-- ACM Logo -->
+                    <div class="container-fluid">
+                         <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" 
+                                    data-toggle="collapse" 
+                                    data-target="#bs-example-navbar-collapse-1" 
+                                    aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="index.html">
+                                <img src="images/acm_logo.jpg" alt="ACM Logo"></a>
+                        </div>
+
+                        <!-- Committees Dropdown -->
+                        <div class="collapse navbar-collapse" 
+                             id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" 
+                                       data-toggle="dropdown" role="button" 
+                                       aria-haspopup="true" aria-expanded="false">
+                                        Comittees <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="webDevelopment.html">Web Development</a></li>
+                                        <li><a href="androidDevelopment.html">Android Development</a></li>
+                                        <li><a href="animationTeam.html">Animation Team</a></li>
+                                    </ul>
+                                </li>
+
+                                <!-- Events link -->
+                                <li><a href="Rowan-ACM-Calendar.html">Events</a></li>
+
+                                <!-- Board Members link -->
+                                <li><a href="boardMembers.html">Board Members</a></li>
+
+                                 <!-- Contact Us link -->
+                                <li><a href="emailForm.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </nav>
+            </div>
+        </div>
+        
+        <div align='center'>
+            <div class='border' style='width:70%;'>
+                <!-- Slicebox -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                            <ul id="sb-slider" class="sb-slider">
+                                <li>
+                                    <img src="images/1.jpg" alt="image1"/>
+
+                                    <div class="sb-description">
+                                        <h3>Test 1</h3>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <img src="images/2.jpg" alt="image2"/>
+                                    <div class="sb-description">
+                                        <h3>Test 2</h3>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- This div will hold the Google calendar -->
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" style="width: 100px">    
+                            <iframe src="https://www.google.com/calendar/embed?mode=AGENDA&amp;height=600&amp;wkst
+                                    =2&amp;bgcolor=%23FFFFFF&amp;src=students.rowan.edu_gj0umqr01gtm1ofgc576fu3ujs%40group.calendar.google.com&amp;color
+                                    =%23875509&amp;ctz=America%2FNew_York" 
+                                    style=" border-width:0 " width="500" height="320" frameborder="0" scrolling="no" class="calendar">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RSS Feed. I hate putting JS in HTML, but this isn't a security risk-->
+                <div class="container" style="width: 100%;">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <!-- start feedwind code -->
+                            <script type="text/javascript">
+                                document.write('\x3Cscript type="text/javascript" src="' + 
+                                        ('https:' == document.location.protocol ? 'https://' : 'http://') + 
+                                        'feed.mikle.com/js/rssmikle.js">\x3C/script>');
+                            </script>
+
+                            <script type="text/javascript">
+                                (function() 
+                                {
+                                    var params = 
+                                    {
+                                        rssmikle_url: "http://cacm.acm.org/magazine.rss", //If you want to change the RSS feed; change this url.
+                                        rssmikle_frame_width: "100%",
+                                        rssmikle_frame_height: "300",
+                                        frame_height_by_article: "0",
+                                        rssmikle_target: "_blank",
+                                        rssmikle_font: "Arial, Helvetica, sans-serif",
+                                        rssmikle_font_size: "12",
+                                        rssmikle_border: "off",
+                                        responsive: "off",
+                                        rssmikle_css_url: "",
+                                        text_align: "left",
+                                        text_align2: "left",
+                                        corner: "off",
+                                        scrollbar: "on",
+                                        autoscroll: "off",
+                                        scrolldirection: "up",
+                                        scrollstep: "3",
+                                        mcspeed: "20",
+                                        sort: "Off",
+                                        rssmikle_title: "on",
+                                        rssmikle_title_sentence: "ACM",
+                                        rssmikle_title_link: "",
+                                        rssmikle_title_bgcolor: "#000000",
+                                        rssmikle_title_color: "#FFFFFF",
+                                        rssmikle_title_bgimage: "",
+                                        rssmikle_item_bgcolor: "#FFFFFF",
+                                        rssmikle_item_bgimage: "",
+                                        rssmikle_item_title_length: "55",
+                                        rssmikle_item_title_color: "#0066FF",
+                                        rssmikle_item_border_bottom: "on",
+                                        rssmikle_item_description: "on",
+                                        item_link: "off",rssmikle_item_description_length: "150",
+                                        rssmikle_item_description_color: "#666666",rssmikle_item_date: "gl1",
+                                        rssmikle_timezone: "Etc/GMT",
+                                        datetime_format: "%b %e, %Y %l:%M %p",
+                                        item_description_style: "text+tn",
+                                        item_thumbnail: "full",item_thumbnail_selection: "auto",
+                                        article_num: "15",
+                                        rssmikle_item_podcast: "off",
+                                        keyword_inc: "",keyword_exc: ""
+                                    };
+                                    feedwind_show_widget_iframe(params);})();
+                            </script>
+
+                            <div style="font-size:10px; text-align:center; width:300px;">
+                                <a href="http://feed.mikle.com/" target="_blank" 
+                                   style="color:#CCCCCC;">RSS Feed Widget</a>
+                                <!--Please display the above link in your web page according to Terms of Service.-->
+                            </div>
+                            <!-- end feedwind code -->
+                        </div>
+
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        
+        <!-- Footer -->
+        <div align="center">
+            <div style="width: 72%">
+                <nav class="navbar navbar-inverse">
+                    <div>
+                        <a href="#">About</a>
+                        |
+                        <a href="http://www.acm.org/">ACM Main Site</a>
+                    </div>
+                   
+                    <div>
+                        <span>
+                            <a href="https://www.facebook.com/rowanacm">
+                                <img src="images/facebook_logo/FB-f-Logo__blue_29.png" alt="facebook"/>
+                            </a>
+                        </span>
+
+                        <span>
+                            <a href='https://github.com/RowanACM'>
+                                <img src='images/github_logo/GitHub-Mark-Light-32px.png' alt='github'/>
+                            </a>
+                        </span>
+                    </div>
+                    
+                    
+                    <p>ACM Website developed by the ACM Web Development Team 2015</p>
+                </nav>
+            </div>
+        </div>
+       
+        
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        
+        <!-- Bootstrap's JavaScript -->
+        <script src="js/bootstrap_js/bootstrap.min.js"></script>
+        
+        <!-- Slicebox JavaScript -->
+        <script src="js/slicebox_js/modernizr.custom.46884.js"></script>
+        <script src="js/slicebox_js/jquery.slicebox.js"></script>
+ 
+        <!-- Script calls and customizes Slicebox. -->
+        <script src="js/slicebox_js/slicebox.js"></script>
+        
+    </body>
+</html>
