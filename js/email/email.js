@@ -8,22 +8,63 @@
 
 function submitForm()
 {
-    var name = document.getElementById("name");
-    var email = document.getElementById("email");
-    var subject = document.getElementById("subject");
-    var comment = document.getElementById("comment");
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var subject = document.getElementById("subject").value;
+    var comment = document.getElementById("comment").value;
     
-    $.post("php/email.php", {name: name, email: email, subject: subject, comment: comment}, function(data)
-    {
-        if(data.submitted === true)
-        {
+    $.ajax({
+            url: 'php/email.php',
+            type: 'post',
+            data: {'name': name, 'email': email, 'subject': subject, 'comment': comment},
+            success: function(data)
+            {
+                data = $.parseJSON('[' + data + ']'); //Parse to JSON array.
+                if(data[0].submitted === true) //Email sent.
+                {
+                   var n = noty(
+                    {
+                        layout: 'topRight',
+                        theme: 'relax',
+                        type: 'success',
+                        text: "We got your email and we'll get back to you ASAP!",
+                        animation:
+                        {
+                            open: 'animated rollIn',
+                            close: 'animated rollOut'
+                        },
+                        maxVisible: 5,
+                        closeWith: ['click'],
+                        timeout: 2500,    //2500ms
+                        buttons: false
+                    });
+                }
+                else //Print error
+                {
+                    var n = noty(
+                    {
+                        layout: 'topRight',
+                        theme: 'relax',
+                        type: 'error',
+                        text: data[0].error,
+                        animation:
+                        {
+                            open: 'animated rollIn',
+                            close: 'animated rollOut'
+                        },
+                        maxVisible: 5,
+                        closeWith: ['click'],
+                        timeout: 2500,    //2500ms
+                        buttons: false
+                    });
+                }
+            },
+            error: function(err)
+            {
+                console.log(err);
+            }
             
-        }
-        else
-        {
-            var error = data.error;
-        }
-    });
+        });
 }
 
 //Check for browser support.
