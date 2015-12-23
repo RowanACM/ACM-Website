@@ -28,7 +28,9 @@ cannot help with.
     box-shadow: 5px 31px 43px -6px rgba(0,0,0,0.63);
 }
 
-/* Responsive iFrame */
+/* Responsive iFrame
+   http://themeloom.com/2013/02/tips-embed-google-maps-and-calendars-in-a-responsive-wordpress-theme/
+ */
 .responsive-iframe-container {
     position: relative;
     padding-bottom: 52.25%;
