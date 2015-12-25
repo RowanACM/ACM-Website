@@ -10,7 +10,7 @@
 
 if(isset($_POST['email'])) //Check if email was entered.
 {
-    $emailTo = "bucknamj8@students.rowan.edu";
+    $emailTo = "bucknamj8@students.rowan.edu,menons21@students.rowan.edu,ceroner0@students.rowan.edu";
     $email_subject = $_POST['subject'];
 
     $emailMessage = "";
