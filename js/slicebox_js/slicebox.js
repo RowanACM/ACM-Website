@@ -1,5 +1,4 @@
-
-
+    
     $('#sb-slider').slicebox(
     {
         orientation: 'h',
